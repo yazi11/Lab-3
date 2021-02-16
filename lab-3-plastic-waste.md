@@ -1,7 +1,7 @@
 Lab 3 - Plastic Waste
 ================
 DSC 200 - Data Science I
-2021-02-06
+2021-02-16
 
 Student Name:
 
@@ -64,6 +64,14 @@ there, or whether this is a data error.
 E1. Plot, using histograms, the distribution of plastic waste per capita
 faceted by continent. What can you say about how the continents compare
 to each other in terms of their plastic waste per capita?
+
+``` r
+ggplot(data = plastic_waste, 
+      mapping = aes(x = plastic_waste_per_cap, 
+                    color = continent, 
+                    fill = continent)) +
+   geom_histogram(alpha = 0.7)
+```
 
 **NOTE:** From this point onwards the plots and the output of the code
 are not displayed in the lab instructions, but you can and should write
@@ -172,7 +180,7 @@ use](https://ggplot2.tidyverse.org/reference/index.html#section-geoms).
 E8. Recreate the following plot, and interpret what you see in context
 of the data.
 
-![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Knit, *commit (with an appropriate message), and push your changes to
 GitHub with an appropriate commit message. Make sure to commit and push
